@@ -6,3 +6,5 @@ com/jojoldu/book/springboot/web/PostApiControllerTest.java
  com.jojoldu.book.springboot.web.PostApiControllerTest
 com/jojoldu/book/springboot/domain/posts/PostsRepositoryTest.java
  com.jojoldu.book.springboot.domain.posts.PostsRepositoryTest
+com/jojoldu/book/springboot/web/IndexControllerTest.java
+ com.jojoldu.book.springboot.web.IndexControllerTest
