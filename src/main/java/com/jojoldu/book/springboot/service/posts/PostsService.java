@@ -15,7 +15,7 @@ import javax.transaction.Transactional;
 public class PostsService {
     private final PostsRepository postsRepository;
 
-    @Transactional
+    @Transactional//여러기능을 하나로 묶어 실행해서 하나라도 잘못되면 모두 취소해야한다(데이터 무결성 보장).
     public long save(PostsSaveRequestDto requestDto){
         return postsRepository.save(requestDto.toEntity()).getId();
     }

@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor //초기화 되지않은 final 필드나 @notnull이 붙은 필드에 생성자를 생성
-@RestController //뷰페이지가 따로 필요없이 결과만 도출한다.
+@RestController //Json 형태로 객체 데이터를 반환하기위한 컨트롤러
 public class PostApiController {
     private final PostsService postsService;
 
