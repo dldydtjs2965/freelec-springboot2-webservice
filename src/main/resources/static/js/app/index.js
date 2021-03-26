@@ -6,6 +6,11 @@ let main = {
         $('#btn-save').on('click', function (){
             _this.save();
         });
+
+        $('#btn-update').on('click', function (){
+            alert("test");
+            _this.update();
+        });
     },
     save : function () {
 
@@ -31,6 +36,28 @@ let main = {
         });
 
         console.log(data);
+    },
+    update : function () {
+
+        let data = {
+            title: $('#title').val(),
+            content: $('#content').val()
+        }
+
+        let id = $('#id').val();
+
+        $.ajax({
+            type: 'PUT', //데이터를 수정한다.
+            url: '/api/v1/posts/'+id,
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(data)
+        }).done(function () {
+            alert('글이 수정 되었습니다.');
+            window.location.href= '/';
+        }).fail(function (error){
+            alert(JSON.stringify(error));
+        });
     }
 };
 
